@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="formmanagement">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Formular Manager</title>
+
+    <link rel="stylesheet" href="/components/formmanagement/css/all.css"/>
+
+    <!-- External Components -->
+    <script src="/components/jquery/dist/jquery.js"></script>
+    <script src="/components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/components/angular/angular.js"></script>
+    <script src="/components/angular-resource/angular-resource.js"></script>
+    <script src="/components/angular-route/angular-route.js"></script>
+    <script src="/components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <!--<script type="text/javascript" src="components/fullcalendar/dist/fullcalendar.js"></script>
+    <script type="text/javascript" src="components/fullcalendar/dist/gcal.js"></script> -->
+
+    <!-- Internal Components -->
+    <script src="/components/formmanagement/app.js"></script>
+    <script src="/components/formmanagement/api/api.js"></script>
+    <script src="/components/formmanagement/common/common.js"></script>
+    <script src="/components/formmanagement/chart/Chart.min.js"></script>
+    <script src="/components/formmanagement/bar-calendar/bar-calendar.js"></script>
+    <!---->
+
+
+</head>
+<body class="fm-body">
+<div ng-controller="NavbarCtrl">
+    <div id="header_area">
+        <div id="header_area_inner">
+            <div id="header_area_inner2">
+                <div id="header_wrap">
+                    <div id="header_logo">
+                        <img width="100%" class="img-rounded profile-picture"
+                             ng-src="/api/files/27447cba3a17296356940bc8819bb7/header_wrap_picture.png"
+                             title="{{ getTitle() }}"/>
+                    </div>
+                </div>
+                <nav class="navbar navbar-default" id="navbar-header" role="navigation">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                    data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Home</a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Das Breul <span
+                                            class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Gemeinschaft</a></li>
+                                        <li><a href="#/bar-calendar">Tradition</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Bewerben</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Bewerben</a></li>
+                                <li><a href="#">Kontakt</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a ng-click="login()" ng-hide="session.user">Login</a></li>
+                                <li class="dropdown" ng-show="session.user">
+                                    <a href="#" class="dropdown-toggle"
+                                       data-toggle="dropdown">{{session.user.name}}<span
+                                            class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Einstellungen</a></li>
+                                        <li><a ng-click="logout()">Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="content">
+    <ng-view></ng-view>
+</div>-->
+
+
+</body>
+</html>
