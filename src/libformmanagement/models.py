@@ -38,6 +38,8 @@ class User(db.Model):
     username = db.Column(db.String(80), unique=True)
     pw_hash = db.Column(db.String(100))
     name = db.Column(db.String(80))
+    email = db.Column(db.String(120))
+    birthday = db.Column(db.String(12))
     # Contains Type of current object, needed for inheritance
     type = db.Column(db.Integer)
 
@@ -57,34 +59,24 @@ class User(db.Model):
     def __getitem__(self, item):
         if item == "id": return self.id
 
-class Picture(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80))
-    image = db.Column(db.String(200))
 
-
-class Patient(User):
+class Resident(User):
     id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
     __mapper_args__ = {
         'polymorphic_identity': TYPE_PATIENT
     }
-    email = db.Column(db.String(120))
-    birthday = db.Column(db.String(12))
-    gender = db.Column(db.String(8))
-    # questionnaires = db.relationship("Hads", backref="hads", foreign_keys="Hads.patient_id")
-    questionnaire_replies = db.relationship("Reply", backref="patient", foreign_keys="Reply.patient_id")
-    diagnosis_review = db.relationship("DiagnosisParticipants", backref="patient")
 
-    physician_id = db.Column(db.Integer, db.ForeignKey('physician.id'))
-
-class Physician(User):
+class Barkeeper(User):
     id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
     __mapper_args__ = {
         'polymorphic_identity': TYPE_PHYSICIAN
     }
-    patients = db.relationship("Patient", foreign_keys="Patient.physician_id", backref="physician")
-    diagnosis_review = db.relationship("DiagnosisParticipants", backref="physician")
 
+class Tutor(User):
+    id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
+    __mapper_args__ = {
+        'polymorphic_identity': TYPE_PHYSICIAN
+    }
 
 class Administrator(User):
     id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
@@ -92,81 +84,28 @@ class Administrator(User):
         'polymorphic_identity': TYPE_ADMINISTRATOR
     }
 
+class Picture(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80))
+    image = db.Column(db.String(200))
 
-class Questionnaire(db.Model):
+
+
+class Announcement(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(140))
     type = type = db.Column(db.Integer, unique=True)
     content = db.Column(utils.JSONType(5000))
-    value = db.Column(utils.JSONType(500))
-    scores = db.Column(utils.JSONType(500))
-    instruction = db.Column(db.String(5000))
-    patient_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-
 
     def __repr__(self):
-        return "%s: %s" % (self.title, self.value)
-
-    def __getitem__(self, item):
-        if item == "value": return self.value
+        return "%s: %s" % (self.title)
 
 
-class Reply(db.Model):
+class Category(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    patient_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    date = db.Column(db.String(12))
-    data = db.Column(utils.JSONType(5000))
+    name = db.Column(db.String(140))
 
-    type = db.Column(db.Integer)
+class ConversationParticipants(db.Model):
+    announcement_id = db.Column(db.Integer, db.ForeignKey('announcement.id'), primary_key=True)
+    category_id = db.Column(db.Integer, db.ForeignKey('category.id'), primary_key=True)
 
-    __mapper_args__ = {
-        'polymorphic_on': type,
-        'with_polymorphic': '*'
-    }
-
-    def __repr__(self):
-        return "%s: %s" % (self.patient_id, self.data)
-    def __getitem__(self, item):
-        if item == "data": return self.data
-
-
-class Hads(Reply):
-    id = db.Column(db.Integer, db.ForeignKey('reply.id'), primary_key=True)
-    __mapper_args__ = {
-        'polymorphic_identity': TYPE_HADS
-    }
-
-    anxiety_scale = db.Column(db.Integer)
-    depression_scale = db.Column(db.Integer)
-
-
-class Dlqi(Reply):
-    id = db.Column(db.Integer, db.ForeignKey('reply.id'), primary_key=True)
-    __mapper_args__ = {
-        'polymorphic_identity': TYPE_DLQI
-    }
-
-    score = db.Column(db.Integer)
-
-
-class PbiFollowUp(Reply):
-    id = db.Column(db.Integer, db.ForeignKey('reply.id'), primary_key=True)
-    __mapper_args__ = {
-        'polymorphic_identity': TYPE_PBI_FOLLOWUP
-    }
-    score = db.Column(db.Integer)
-
-class PbiNew(Reply):
-    id = db.Column(db.Integer, db.ForeignKey('reply.id'), primary_key=True)
-    __mapper_args__ = {
-        'polymorphic_identity': TYPE_PBI_NEW
-    }
-    score = db.Column(db.Integer)
-
-class DiagnosisParticipants(db.Model):
-
-    patient_id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
-    physician_id = db.Column(db.Integer, db.ForeignKey('physician.id'), primary_key=True)
-
-    def __unicode__(self):
-        return u"[%s @ %s %s]" % (self.patient, self.physician)

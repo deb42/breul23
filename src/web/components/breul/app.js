@@ -11,7 +11,8 @@ var breul = angular.module("breul", [     // declaration of bankbook (main) modu
     "breul.common",
     "breul.patients",
     "breul.application",
-    "breul.main"
+    "breul.main",
+    "breul.intern"
 ]);
 
 // create routing functionality on singleton $routeProvider and declare default route for non-existing sub pages

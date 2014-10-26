@@ -48,15 +48,12 @@ class FiktivFileAdmin(FileAdmin):
 
 # To add a model to the admin interface, simply add it below.
 # admin.add_view(ModelView(User, db.session))
-admin.add_view(FiktivModelView(DiagnosisParticipants, db.session))
-admin.add_view(FiktivModelView(Patient, db.session, category="Users"))
-admin.add_view(FiktivModelView(Physician, db.session, category="Users"))
+admin.add_view(FiktivModelView(Resident, db.session))
+admin.add_view(FiktivModelView(Barkeeper, db.session, category="Users"))
+admin.add_view(FiktivModelView(Tutor, db.session, category="Users"))
 admin.add_view(FiktivModelView(Administrator, db.session, category="Users"))
-admin.add_view(FiktivModelView(Reply, db.session))
-admin.add_view(FiktivModelView(Hads, db.session, category="Replies"))
-admin.add_view(FiktivModelView(Dlqi, db.session, category="Replies"))
-admin.add_view(FiktivModelView(PbiNew, db.session, category="Replies"))
-admin.add_view(FiktivModelView(PbiFollowUp, db.session, category="Replies"))
-admin.add_view(FiktivModelView(Questionnaire, db.session))
+admin.add_view(FiktivModelView(Announcement, db.session))
+admin.add_view(FiktivModelView(Category, db.session))
+
 admin.add_link(MenuLink(name='FIKtiv', url='/'))
 
