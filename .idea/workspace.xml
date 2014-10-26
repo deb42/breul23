@@ -2,174 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f12e30d9-4b5d-4e2f-ab43-ce310e7bee92" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/components/formmanagement/patients/diagnosis-participants.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/components/formmanagement/patients/patients-overview.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/components/formmanagement/patients/patients-select.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/components/formmanagement/patients/patients.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/components/formmanagement/patients/patients.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/components/formmanagement/patients/patients.less" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\uploads\0cc81dea2fbb0b55b8cc1ae5ffe3c0\header_wrap_picture.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\chart\Chart.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\main\main.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\changelog.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\fullcalendar.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\fullcalendar.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\fullcalendar.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\fullcalendar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\fullcalendar.print.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\gcal.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang-all.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\ar-ma.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\ar-sa.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\ar.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\bg.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\ca.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\cs.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\da.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\de-at.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\de.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\el.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\en-au.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\en-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\en-gb.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\es.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\fa.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\fi.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\fr-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\fr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\hi.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\hr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\hu.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\id.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\is.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\it.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\ja.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\ko.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\lt.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\lv.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\nl.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\pl.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\pt-br.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\pt.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\ro.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\ru.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\sk.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\sl.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\sr-cyrl.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\sr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\sv.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\th.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\tr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\uk.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\vi.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\zh-cn.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\dist\lang\zh-tw.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\license.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\fullcalendar\readme.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\jquery-ui\jquery-ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\benchmarks\clone.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\af.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\ar-ma.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\ar-sa.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\ar.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\az.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\be.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\bg.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\bn.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\bo.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\br.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\bs.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\ca.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\cs.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\cv.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\cy.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\da.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\de-at.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\de.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\el.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\en-au.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\en-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\en-gb.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\eo.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\es.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\et.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\eu.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\fa.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\fi.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\fo.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\fr-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\fr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\gl.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\he.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\hi.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\hr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\hu.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\hy-am.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\id.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\is.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\it.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\ja.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\ka.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\km.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\ko.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\lb.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\lt.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\lv.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\mk.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\ml.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\mr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\ms-my.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\my.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\nb.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\ne.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\nl.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\nn.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\pl.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\pt-br.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\pt.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\ro.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\ru.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\sk.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\sl.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\sq.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\sr-cyrl.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\sr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\sv.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\ta.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\th.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\tl-ph.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\tr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\tzm-latn.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\tzm.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\uk.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\uz.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\vi.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\zh-cn.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\locale\zh-tw.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\min\locales.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\min\locales.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\min\moment-with-locales.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\min\moment-with-locales.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\min\moment.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\moment\moment.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/formmanagement.db" afterPath="$PROJECT_DIR$/src/formmanagement.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/components/formmanagement/api/api.js" afterPath="$PROJECT_DIR$/src/web/components/formmanagement/api/api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/components/formmanagement/main/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/components/formmanagement/app.js" afterPath="$PROJECT_DIR$/src/web/components/formmanagement/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/components/bootstrap/less/bootstrap.css" afterPath="$PROJECT_DIR$/src/web/components/bootstrap/less/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/components/formmanagement/common/common.js" afterPath="$PROJECT_DIR$/src/web/components/formmanagement/common/common.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/index.html" afterPath="$PROJECT_DIR$/src/web/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/components/formmanagement/login/login.css" afterPath="$PROJECT_DIR$/src/web/components/formmanagement/login/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/components/bootstrap/less/navbar.less" afterPath="$PROJECT_DIR$/src/web/components/bootstrap/less/navbar.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/components/formmanagement/questionnaire/questionnaire.js" afterPath="$PROJECT_DIR$/src/web/components/formmanagement/questionnaire/questionnaire.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/components/bootstrap/less/theme.css" afterPath="$PROJECT_DIR$/src/web/components/bootstrap/less/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/components/bootstrap/less/variables.less" afterPath="$PROJECT_DIR$/src/web/components/bootstrap/less/variables.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="breul23.iws" />
@@ -196,11 +31,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38931298" vertical-offset="255" max-vertical-offset="1768">
-              <caret line="24" column="85" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
+            <state vertical-scroll-proportion="-8.576923" vertical-offset="1392" max-vertical-offset="1785">
+              <caret line="95" column="6" selection-start-line="95" selection-start-column="6" selection-end-line="95" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/main/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.81145585" vertical-offset="0" max-vertical-offset="442">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/main/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="7.1923075" vertical-offset="459" max-vertical-offset="1581">
+              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -209,8 +64,8 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
-              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1377">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -220,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/patients/patients.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -288,13 +143,13 @@
         <option value="$PROJECT_DIR$/src/web/components/formmanagement/css/formmanagement.less" />
         <option value="$PROJECT_DIR$/src/web/components/formmanagement/bar-calendar/bar-calendar.html" />
         <option value="$PROJECT_DIR$/src/web/components/formmanagement/main/main.html" />
-        <option value="$PROJECT_DIR$/src/web/components/formmanagement/main/main.js" />
         <option value="$PROJECT_DIR$/src/web/components/formmanagement/common/common.js" />
         <option value="$PROJECT_DIR$/src/web/components/formmanagement/api/api.js" />
-        <option value="$PROJECT_DIR$/src/web/components/formmanagement/app.js" />
         <option value="$PROJECT_DIR$/src/web/components/formmanagement/patients/patients.js" />
         <option value="$PROJECT_DIR$/src/web/components/formmanagement/questionnaire/questionnaire.js" />
+        <option value="$PROJECT_DIR$/src/web/components/formmanagement/app.js" />
         <option value="$PROJECT_DIR$/src/web/index.html" />
+        <option value="$PROJECT_DIR$/src/web/components/formmanagement/main/main.js" />
       </list>
     </option>
   </component>
@@ -475,6 +330,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="patients" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="breul23" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="breul23" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="formmanagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -933,22 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/patients/patients.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/questionnaire/questionnaire.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="6" max-vertical-offset="425">
@@ -959,8 +828,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38931298" vertical-offset="255" max-vertical-offset="1768">
-          <caret line="24" column="85" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
+        <state vertical-scroll-proportion="-8.576923" vertical-offset="1392" max-vertical-offset="1785">
+          <caret line="95" column="6" selection-start-line="95" selection-start-column="6" selection-end-line="95" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/patients/patients.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1377">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/main/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.1923075" vertical-offset="459" max-vertical-offset="1581">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/main/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.81145585" vertical-offset="0" max-vertical-offset="442">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
           <folding />
         </state>
       </provider>

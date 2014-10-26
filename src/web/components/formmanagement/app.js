@@ -10,7 +10,8 @@ var formmanagement = angular.module("formmanagement", [     // declaration of ba
     "formmanagement.api",                             // included bankbook modules
     "formmanagement.common",
     "formmanagement.patients",
-    "formmanagement.questionnaire"
+    "formmanagement.questionnaire",
+    "formmanagement.main"
 ]);
 
 // create routing functionality on singleton $routeProvider and declare default route for non-existing sub pages
@@ -26,11 +27,6 @@ formmanagement.config(['$routeProvider',
 formmanagement.run(["Session", "$rootScope", "showLoginDialog", "$location", "isPatient", "isPhysician",
     function (Session, $rootScope, showLoginDialog, $location, isPatient, isPhysician) {
 
-        Session.init
-            .error(function () {
-                showLoginDialog();
-            });
-
 
         var session = Session.get();
         // show modal for choosing advisor, if client and no advisor is set
@@ -39,23 +35,12 @@ formmanagement.run(["Session", "$rootScope", "showLoginDialog", "$location", "is
         }, function () {
             /* jshint bitwise:false */
             var user = session.user;
-            if (user && isPatient(user)) {
-                if (user.physician_id === 0) {
-                    $location.path("/questionnaire/new");
-                } else {
-                    $location.path("/questionnaire/followup");
-                }
-
-            }
-            if (user && isPhysician(user)) {
-                $location.path("/patients/all");
-            }
         });
 
     }]);
 
-formmanagement.controller("NavbarCtrl", ["$scope", "$location", "Session", "isPhysician", "isPatient", "isAdmin", "AssignedPatients",
-    function ($scope, $location, Session, isPhysician, isPatient, isAdmin, AssignedPatients) {
+formmanagement.controller("NavbarCtrl", ["$scope", "$location", "Session", "isPhysician", "isPatient", "isAdmin", "AssignedPatients", "showLoginDialog",
+    function ($scope, $location, Session, isPhysician, isPatient, isAdmin, AssignedPatients, showLoginDialog) {
 
         $scope.session = Session.get();
         $scope.isPhysician = isPhysician;
@@ -74,10 +59,17 @@ formmanagement.controller("NavbarCtrl", ["$scope", "$location", "Session", "isPh
                 return "";
             }
         };
+
+        $scope.login = function () {
+            showLoginDialog();
+        };
+
         $scope.logout = function () {
             $location.path('/');
             Session.logout();
         };
+
+
     }]);
 
 
