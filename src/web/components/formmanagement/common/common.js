@@ -4,6 +4,27 @@ var common = angular.module("formmanagement.common", [
 ]);
 
 
+common.factory('isPatient', ['UserType', function (UserType) {
+    return function (user) {
+        /* jshint bitwise: false */
+        return (user && (user.type & UserType.Patient));
+    };
+}]);
+
+common.factory('isPhysician', ['UserType', function (UserType) {
+    return function (user) {
+        /* jshint bitwise: false */
+        return (user && (user.type & UserType.Physician));
+    };
+}]);
+
+common.factory('isAdmin', ['UserType', function (UserType) {
+    return function (user) {
+        /* jshint bitwise: false */
+        return (user && (user.type & UserType.Admin));
+    };
+}]);
+
 common.factory('showSingUpDialog', ['$modal', '$http', 'Session', 'Patient',
     function ($modal, $http, Session, Patient) {
 
@@ -70,36 +91,67 @@ common.factory('showSingUpDialog', ['$modal', '$http', 'Session', 'Patient',
 
     }]);
 
-common.directive('picture', [function () {
-    return {
-        scope: {
-            source: "=", // user object
-            title: "=?"
-        },
-        restrict: "E",
-        link: function (scope, element, attrs) {
-            // set watcher for user object (see options page)
 
-            scope.$watch("source", function (image) {
-                if (image) {
-                    scope.url = "/api/files/" + image;
-                } else {
-                    scope.url = "";
-                }
-                console.log(image)
-                console.log(scope.url);
-            });
-            scope.getTitle = function () {
-                if (scope.title) {
-                    return scope.title;
-                } else if (scope.user) {
-                    return scope.user.name;
-                } else {
-                    return "";
-                }
-            };
+common.directive('questionnaireForm', [function () {
+    return{
+        restrict: "E",
+        scope: {
+            questionnaire: "=",
+            index: "=",
+            answers: "=",
+            reply: "="
         },
-        template: '<img class="img-rounded profile-picture" ng-src="{{ url }}" title="{{ getTitle() }}" />'
+        templateUrl: '/components/formmanagement/common/questionnaie-form.html',
+
+        link: function (scope, element, attrs) {
+
+        }
     };
 }]);
+
+common.directive('chart', function () {
+    var baseWidth = 800;
+    var baseHeight = 600;
+
+    return {
+        restrict: 'E',
+        template: '<canvas></canvas>',
+        scope: {
+            chartObject: "=value"
+        },
+        link: function (scope, element, attrs) {
+            var canvas = element.find('canvas')[0],
+                context = canvas.getContext('2d'),
+                chart;
+
+            var options = {
+                type: attrs.type || "Line",
+                width: attrs.width || baseWidth,
+                height: attrs.height || baseHeight
+            };
+            canvas.width = options.width;
+            canvas.height = options.height;
+            chart = new Chart(context);
+
+            scope.$watch(function () {
+                return element.attr('type');
+            }, function (value) {
+                if (!value) return;
+                options.type = value;
+                var chartType = options.type;
+                chart[chartType](scope.chartObject.data, scope.chartObject.options);
+            });
+
+            //Update when charts data changes
+            scope.$watch(function () {
+                return scope.chartObject;
+            }, function (value) {
+                if (!value) return;
+                var chartType = options.type;
+                chart[chartType](scope.chartObject.data, scope.chartObject.options);
+            });
+        }
+
+    }
+});
 

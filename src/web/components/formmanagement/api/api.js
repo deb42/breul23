@@ -16,14 +16,14 @@ var TYPE_PATIENT = 1;
 var TYPE_PHYSICIAN = 2;
 var TYPE_ADMIN = 4;
 
-/*api.constant("UserType", {
+api.constant("UserType", {
     "Patient": TYPE_PATIENT,
     "Physician": TYPE_PHYSICIAN,
     "Admin": TYPE_ADMIN
 });
 api.factory("getUserClass", [ "Patient" , "Physician", function (Patient, Physician) {
     return function getUserClass(type) {
-         jshint bitwise: false
+        /* jshint bitwise: false*/
         if (type & TYPE_PHYSICIAN) {
             return Physician;
         }
@@ -33,7 +33,7 @@ api.factory("getUserClass", [ "Patient" , "Physician", function (Patient, Physic
     };
 }]);
 
-//api.factory("Patient", ["$resource", function ($resource) {
+api.factory("Patient", ["$resource", function ($resource) {
     return $resource("/api/patients/:type", {type: "@type"});
 }]);
 
@@ -52,13 +52,9 @@ api.factory("Reply", ["$resource", function ($resource) {
 api.factory("DiagnosisParticipants", ["$resource", function ($resource) {
             return $resource("/api/diagnosis/participants/:patient", {patient: "@patient"});
 }]);
-*/
+
 api.factory("AssignedPatients", ["$resource", function ($resource) {
             return $resource("/api/diagnosis/patients");
-}]);
-
-api.factory("Picture", ["$resource", function ($resource) {
-            return $resource("/api/picture/:name", {name: "@name"});
 }]);
 
 api.service("Session", ["$http", "$q", "getUserClass", "Physician",
