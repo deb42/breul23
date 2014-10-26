@@ -1,11 +1,11 @@
 "use strict";
 
 /**
- * Formmanagement API Module
+ * breul API Module
  * Contains all client-side models and manages *all* communication with the backend.
  **/
 
-var api = angular.module("formmanagement.api", [
+var api = angular.module("breul.api", [
     "ngResource",
     "ui.bootstrap.modal",
     "ui.bootstrap.tpls"
@@ -179,7 +179,7 @@ api.factory('showLoginDialog', ['$modal', '$http', '$location', 'Session', 'show
         return function showLoginDialog() {
             $modal.open({
                 controller: LoginDialogCtrl,
-                templateUrl: '/components/formmanagement/login/login.html',
+                templateUrl: '/components/breul/login/login.html',
                 keyboard: false,
                 backdrop: "static"
             });

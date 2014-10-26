@@ -2,8 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f12e30d9-4b5d-4e2f-ab43-ce310e7bee92" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/components/formmanagement/main/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/components/formmanagement/app.js" afterPath="$PROJECT_DIR$/src/web/components/formmanagement/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/components/breul/application/application.js" />
+      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\questionnaire\questionnaire.js" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\api\api.js" afterPath="$PROJECT_DIR$/src/web/components/breul/api/api.js" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\app.js" afterPath="$PROJECT_DIR$/src/web/components/breul/app.js" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\common\common.js" afterPath="$PROJECT_DIR$/src/web/components/breul/common/common.js" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\common\questionnaie-form.html" afterPath="$PROJECT_DIR$/src/web/components/breul/common/questionnaie-form.html" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\css\all.css" afterPath="$PROJECT_DIR$/src/web/components/breul/css/all.css" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\css\all.less" afterPath="$PROJECT_DIR$/src/web/components/breul/css/all.less" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\css\formmanagement.css" afterPath="$PROJECT_DIR$/src/web/components/breul/css/formmanagement.css" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\css\formmanagement.less" afterPath="$PROJECT_DIR$/src/web/components/breul/css/formmanagement.less" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\fonts\FontAwesome.otf" afterPath="$PROJECT_DIR$/src/web/components/breul/fonts/FontAwesome.otf" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\fonts\fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/src/web/components/breul/fonts/fontawesome-webfont.eot" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\fonts\fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/src/web/components/breul/fonts/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\fonts\fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/src/web/components/breul/fonts/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\fonts\fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/src/web/components/breul/fonts/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\login\login.css" afterPath="$PROJECT_DIR$/src/web/components/breul/login/login.css" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\login\login.html" afterPath="$PROJECT_DIR$/src/web/components/breul/login/login.html" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\login\login.less" afterPath="$PROJECT_DIR$/src/web/components/breul/login/login.less" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\login\new-patient.html" afterPath="$PROJECT_DIR$/src/web/components/breul/login/new-patient.html" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\main\main.html" afterPath="$PROJECT_DIR$/src/web/components/breul/main/main.html" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\main\main.js" afterPath="$PROJECT_DIR$/src/web/components/breul/main/main.js" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\patients\diagnosis-participants.html" afterPath="$PROJECT_DIR$/src/web/components/breul/patients/diagnosis-participants.html" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\patients\patients-overview.html" afterPath="$PROJECT_DIR$/src/web/components/breul/patients/patients-overview.html" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\patients\patients-select.html" afterPath="$PROJECT_DIR$/src/web/components/breul/patients/patients-select.html" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\patients\patients.css" afterPath="$PROJECT_DIR$/src/web/components/breul/patients/patients.css" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\patients\patients.js" afterPath="$PROJECT_DIR$/src/web/components/breul/patients/patients.js" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\patients\patients.less" afterPath="$PROJECT_DIR$/src/web/components/breul/patients/patients.less" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\questionnaire\quesionnaire.css" afterPath="$PROJECT_DIR$/src/web/components/breul/application/application.css" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\questionnaire\quesionnaire.less" afterPath="$PROJECT_DIR$/src/web/components/breul/application/application.less" />
+      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\breul23\src\web\components\formmanagement\questionnaire\questionnaire.html" afterPath="$PROJECT_DIR$/src/web/components/breul/application/application.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config_dev.py" afterPath="$PROJECT_DIR$/src/config_dev.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/index.html" afterPath="$PROJECT_DIR$/src/web/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -34,74 +63,59 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.576923" vertical-offset="1392" max-vertical-offset="1785">
-              <caret line="95" column="6" selection-start-line="95" selection-start-column="6" selection-end-line="95" selection-end-column="6" />
+            <state vertical-scroll-proportion="-2.9078948" vertical-offset="816" max-vertical-offset="1785">
+              <caret line="61" column="77" selection-start-line="61" selection-start-column="77" selection-end-line="61" selection-end-column="77" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/main/main.js">
+      <file leaf-file-name="common.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web/components/breul/common/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.81145585" vertical-offset="0" max-vertical-offset="442">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+            <state vertical-scroll-proportion="-1.02" vertical-offset="0" max-vertical-offset="2771">
+              <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/web/components/breul/application/application.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.65482235" vertical-offset="337" max-vertical-offset="816">
+              <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/main/main.html">
+        <entry file="file://$PROJECT_DIR$/src/web/components/breul/main/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="7.1923075" vertical-offset="459" max-vertical-offset="1581">
-              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state vertical-scroll-proportion="-7.1923075" vertical-offset="374" max-vertical-offset="1581">
+              <caret line="33" column="10" selection-start-line="2" selection-start-column="8" selection-end-line="33" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/app.js">
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web/components/breul/application/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1377">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="patients.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/patients/patients.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="questionnaire.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/questionnaire/questionnaire.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="6" max-vertical-offset="425">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.66" vertical-offset="55" max-vertical-offset="425">
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="api.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/api/api.js">
+        <entry file="file://$PROJECT_DIR$/src/web/components/breul/api/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.14" vertical-offset="2266" max-vertical-offset="2618">
-              <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-              <folding>
-                <marker date="1406035813963" expanded="false" signature="329:1614" placeholder="/*...*/" />
-                <marker date="1406035813963" expanded="true" signature="5074:5538" placeholder="{...}" />
-                <marker date="1406035813963" expanded="true" signature="5161:5470" placeholder="{...}" />
-                <marker date="1406035813963" expanded="true" signature="5542:5621" placeholder="{...}" />
-              </folding>
+            <state vertical-scroll-proportion="-2.38" vertical-offset="0" max-vertical-offset="3315">
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,8 +162,16 @@
         <option value="$PROJECT_DIR$/src/web/components/formmanagement/patients/patients.js" />
         <option value="$PROJECT_DIR$/src/web/components/formmanagement/questionnaire/questionnaire.js" />
         <option value="$PROJECT_DIR$/src/web/components/formmanagement/app.js" />
-        <option value="$PROJECT_DIR$/src/web/index.html" />
         <option value="$PROJECT_DIR$/src/web/components/formmanagement/main/main.js" />
+        <option value="$PROJECT_DIR$/src/web/components/breul/main/main.js" />
+        <option value="$PROJECT_DIR$/src/web/components/breul/patients/patients.js" />
+        <option value="$PROJECT_DIR$/src/web/components/breul/api/api.js" />
+        <option value="$PROJECT_DIR$/src/web/components/breul/common/common.js" />
+        <option value="$PROJECT_DIR$/src/web/components/breul/questionnaire/questionnaire.js" />
+        <option value="$PROJECT_DIR$/src/web/components/breul/app.js" />
+        <option value="$PROJECT_DIR$/src/web/components/breul/application/application.js" />
+        <option value="$PROJECT_DIR$/src/web/index.html" />
+        <option value="$PROJECT_DIR$/src/web/components/breul/application/application.html" />
       </list>
     </option>
   </component>
@@ -269,7 +291,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="formmanagement" />
+              <option name="myItemId" value="breul" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -295,37 +317,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="formmanagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="questionnaire" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="breul23" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="breul23" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="formmanagement" />
+              <option name="myItemId" value="breul" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -355,11 +347,71 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="formmanagement" />
+              <option name="myItemId" value="breul" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="breul23" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="breul23" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="breul" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="breul23" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="breul23" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="breul" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -625,18 +677,18 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32824427" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.244713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39969373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32061067" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31908396" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -797,19 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/api/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.14" vertical-offset="2266" max-vertical-offset="2618">
-          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-          <folding>
-            <marker date="1406035813963" expanded="false" signature="329:1614" placeholder="/*...*/" />
-            <marker date="1406035813963" expanded="true" signature="5074:5538" placeholder="{...}" />
-            <marker date="1406035813963" expanded="true" signature="5161:5470" placeholder="{...}" />
-            <marker date="1406035813963" expanded="true" signature="5542:5621" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/libformmanagement/seed.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5123" max-vertical-offset="5542">
@@ -818,50 +857,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/questionnaire/questionnaire.js">
+    <entry file="file://$PROJECT_DIR$/src/web/components/breul/main/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6" max-vertical-offset="425">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/components/breul/patients/patients.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="391">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/components/breul/api/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.38" vertical-offset="0" max-vertical-offset="3315">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/components/breul/common/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.02" vertical-offset="0" max-vertical-offset="2771">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/components/breul/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="1377">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/components/breul/application/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.66" vertical-offset="55" max-vertical-offset="425">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.576923" vertical-offset="1392" max-vertical-offset="1785">
-          <caret line="95" column="6" selection-start-line="95" selection-start-column="6" selection-end-line="95" selection-end-column="6" />
+        <state vertical-scroll-proportion="-2.9078948" vertical-offset="816" max-vertical-offset="1785">
+          <caret line="61" column="77" selection-start-line="61" selection-start-column="77" selection-end-line="61" selection-end-column="77" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/patients/patients.js">
+    <entry file="file://$PROJECT_DIR$/src/web/components/breul/main/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        <state vertical-scroll-proportion="-7.1923075" vertical-offset="374" max-vertical-offset="1581">
+          <caret line="33" column="10" selection-start-line="2" selection-start-column="8" selection-end-line="33" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/app.js">
+    <entry file="file://$PROJECT_DIR$/src/web/components/breul/application/application.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1377">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/main/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.1923075" vertical-offset="459" max-vertical-offset="1581">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/components/formmanagement/main/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81145585" vertical-offset="0" max-vertical-offset="442">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.65482235" vertical-offset="337" max-vertical-offset="816">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
           <folding />
         </state>
       </provider>

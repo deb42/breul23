@@ -1,7 +1,7 @@
 import os
 
 # dialect+driver://username:password@host:port/database
-SQLALCHEMY_DATABASE_URI = 'sqlite:///%s' % os.path.abspath("formmanagement.db")
+SQLALCHEMY_DATABASE_URI = 'sqlite:///%s' % os.path.abspath("breul.db")
 SQLALCHEMY_ECHO = False
 # Evil as errors during .commit() don't get caught.
 # SQLALCHEMY_COMMIT_ON_TEARDOWN = True
@@ -15,7 +15,7 @@ DEBUG = True
 
 BASIC_AUTH_FORCE = False
 BASIC_AUTH_REALM = "Formmanagement"
-BASIC_AUTH_USERNAME = "formmanagement"
+BASIC_AUTH_USERNAME = "breul"
 BASIC_AUTH_PASSWORD = "1234"
 
 ## File Uploads

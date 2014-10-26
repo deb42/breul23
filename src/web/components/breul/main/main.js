@@ -5,9 +5,9 @@
  * Author:
  **/
 
-var main = angular.module("formmanagement.main", [
+var main = angular.module("breul.main", [
     "ngRoute",
-    "formmanagement.main"
+    "breul.main"
 ]);
 
 main.controller("mainCtrl", ["$scope", "Session", function ($scope, Session){
@@ -16,6 +16,6 @@ main.controller("mainCtrl", ["$scope", "Session", function ($scope, Session){
 
 patients.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
-        templateUrl: '/components/formmanagement/main/main.html'
+        templateUrl: '/components/breul/main/main.html'
     });
 }]);

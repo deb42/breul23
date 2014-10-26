@@ -5,18 +5,18 @@
  * Includes sub pages modules and declares controllers, directives, ... needed for basic bankbook frame functionality
  **/
 
-var formmanagement = angular.module("formmanagement", [     // declaration of bankbook (main) module
+var breul = angular.module("breul", [     // declaration of bankbook (main) module
     "ngRoute",                                  // ngRoute directive for realizing routing
-    "formmanagement.api",                             // included bankbook modules
-    "formmanagement.common",
-    "formmanagement.patients",
-    "formmanagement.questionnaire",
-    "formmanagement.main"
+    "breul.api",                             // included bankbook modules
+    "breul.common",
+    "breul.patients",
+    "breul.application",
+    "breul.main"
 ]);
 
 // create routing functionality on singleton $routeProvider and declare default route for non-existing sub pages
 
-formmanagement.config(['$routeProvider',
+breul.config(['$routeProvider',
     function ($routeProvider) {
         // default route for non-existing routes
         $routeProvider.otherwise({
@@ -24,7 +24,7 @@ formmanagement.config(['$routeProvider',
         });
     }]);
 
-formmanagement.run(["Session", "$rootScope", "showLoginDialog", "$location", "isPatient", "isPhysician",
+breul.run(["Session", "$rootScope", "showLoginDialog", "$location", "isPatient", "isPhysician",
     function (Session, $rootScope, showLoginDialog, $location, isPatient, isPhysician) {
 
 
@@ -39,7 +39,7 @@ formmanagement.run(["Session", "$rootScope", "showLoginDialog", "$location", "is
 
     }]);
 
-formmanagement.controller("NavbarCtrl", ["$scope", "$location", "Session", "isPhysician", "isPatient", "isAdmin", "AssignedPatients", "showLoginDialog",
+breul.controller("NavbarCtrl", ["$scope", "$location", "Session", "isPhysician", "isPatient", "isAdmin", "AssignedPatients", "showLoginDialog",
     function ($scope, $location, Session, isPhysician, isPatient, isAdmin, AssignedPatients, showLoginDialog) {
 
         $scope.session = Session.get();

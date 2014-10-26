@@ -1,6 +1,6 @@
-var common = angular.module("formmanagement.common", [
+var common = angular.module("breul.common", [
     "ngRoute",
-    "formmanagement.api"
+    "breul.api"
 ]);
 
 
@@ -63,7 +63,7 @@ common.factory('showSingUpDialog', ['$modal', '$http', 'Session', 'Patient',
                         .error(function () {
                             Session.signup(newPatient).success(function () {
                                 $modalInstance.close();
-                                $location.path('/questionnaire');
+                                $location.path('/application');
                             });
                         })
                         .success(function () {
@@ -83,7 +83,7 @@ common.factory('showSingUpDialog', ['$modal', '$http', 'Session', 'Patient',
         return function showSingUpDialog() {
             $modal.open({
                 controller: NewPatientCtrl,
-                templateUrl: '/components/formmanagement/login/new-patient.html',
+                templateUrl: '/components/breul/login/new-patient.html',
                 keyboard: false,
                 backdrop: "static"
             });
@@ -101,7 +101,7 @@ common.directive('questionnaireForm', [function () {
             answers: "=",
             reply: "="
         },
-        templateUrl: '/components/formmanagement/common/questionnaie-form.html',
+        templateUrl: '/components/breul/common/questionnaie-form.html',
 
         link: function (scope, element, attrs) {
 

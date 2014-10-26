@@ -5,14 +5,14 @@
  * Author:
  **/
 
-var patients = angular.module("formmanagement.patients", [
+var patients = angular.module("breul.patients", [
     "ngRoute",
-    "formmanagement.api"
+    "breul.api"
 ]);
 
 
 patients.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/patients/assign', {
-        templateUrl: '/components/formmanagement/patients/selectionmethod/patients-assign.html'
+        templateUrl: '/components/breul/patients/selectionmethod/patients-assign.html'
     });
 }]);
