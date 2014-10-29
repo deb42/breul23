@@ -165,6 +165,12 @@ def seed():
             )
         )
 
+    announcements.append( Announcement(
+                title="Lorem Impsum",
+                content=announcements_database[3]["content"],
+                public=1
+            ))
+
     for announcement in announcements:
         db.session.add(announcement)
 

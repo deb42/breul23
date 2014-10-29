@@ -92,6 +92,7 @@ class Announcement(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(140))
     content = db.Column(utils.JSONType(5000))
+    public = db.Column(db.Boolean, default=0)
 
     def __repr__(self):
         return "%s: %s" % (self.title)

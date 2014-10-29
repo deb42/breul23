@@ -333,4 +333,7 @@ def get_picture(name):
 
 @api.route("/announcements")
 def get_announcements():
-    return jsonify(Announcement.query.all())
+    if(session):
+        return jsonify(Announcement.query.all())
+    else:
+        return jsonify(Announcement.query.filter_by(public=1).all())

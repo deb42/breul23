@@ -12,7 +12,11 @@ var announcements = angular.module("breul.announcements", [
 
 announcements.controller("announcementsCtrl", ["$scope", "Session", "Announcements", function ($scope, Session, Announcements) {
     $scope.session = Session.get();
-    $scope.announcements = Announcements.query();
+
+    $scope.$watch("session.user", function () {
+        $scope.announcements = Announcements.query();
+    });
+
 }]);
 
 announcements.config(['$routeProvider', function ($routeProvider) {

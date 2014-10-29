@@ -167,6 +167,7 @@ api.factory('showLoginDialog', ['$modal', '$http', '$location', 'Session', 'show
                     Session.login(user)
                         .success(function () {
                             $modalInstance.close();
+                            $location.path('/announcements');
                             //window.location.reload();
                         })
                         .error(function () {
