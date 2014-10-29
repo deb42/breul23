@@ -37,6 +37,10 @@ api.factory("Announcements", ["$resource", function ($resource) {
     return $resource("/api/announcements");
 }]);
 
+api.factory("Items", ["$resource", function ($resource) {
+    return $resource("/api/items");
+}]);
+
 api.factory("Patient", ["$resource", function ($resource) {
     return $resource("/api/patients/:type", {type: "@type"});
 }]);

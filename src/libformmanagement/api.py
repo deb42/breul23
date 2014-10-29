@@ -182,6 +182,10 @@ As you may note, access control is _not_ implemented yet.
 For the moment, that's a feature, so just ignore it.
 """
 
-@api.route("/barcharge/<resident_id>")
-def get_barcharge(resident_id):
+@api.route("/barCharge/<resident_id>")
+def get_bar_charge(resident_id):
     return jsonify(BarCharge.query.filter_by(resident_id=resident_id).options(joinedload(BarCharge.barcharge_info)).all())
+
+@api.route("/items")
+def get_items():
+    return jsonify(Item.query.all())

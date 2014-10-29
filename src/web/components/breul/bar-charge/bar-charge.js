@@ -10,11 +10,12 @@ var barCharge = angular.module("breul.barCharge", [
     "breul.barCharge"
 ]);
 
-barCharge.controller("announcementsCtrl", ["$scope", "Session", "Announcements", function ($scope, Session, Announcements) {
+barCharge.controller("barChargeCtrl", ["$scope", "Session", "Items", function ($scope, Session, Items) {
     $scope.session = Session.get();
+    $scope.items = Items.query();
 
     $scope.$watch("session.user", function () {
-        $scope.announcements = Announcements.query();
+
     });
 
 }]);
