@@ -10,6 +10,10 @@ var application = angular.module("breul.application", [
     "breul.api"
 ]);
 
+application.controller("applicationCtrl", ["$scope", "Session", function ($scope, Session) {
+    $scope.session = Session.get();
+}]);
+
 
 application.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/application', {
