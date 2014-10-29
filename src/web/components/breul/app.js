@@ -12,7 +12,8 @@ var breul = angular.module("breul", [     // declaration of bankbook (main) modu
     "breul.patients",
     "breul.application",
     "breul.main",
-    "breul.intern"
+    "breul.intern",
+    "breul.announcements"
 ]);
 
 // create routing functionality on singleton $routeProvider and declare default route for non-existing sub pages
@@ -25,8 +26,8 @@ breul.config(['$routeProvider',
         });
     }]);
 
-breul.run(["Session", "$rootScope", "showLoginDialog", "$location", "isPatient", "isPhysician",
-    function (Session, $rootScope, showLoginDialog, $location, isPatient, isPhysician) {
+breul.run(["Session", "$rootScope", "showLoginDialog", "$location",
+    function (Session, $rootScope, showLoginDialog, $location) {
 
 
         var session = Session.get();
@@ -40,15 +41,10 @@ breul.run(["Session", "$rootScope", "showLoginDialog", "$location", "isPatient",
 
     }]);
 
-breul.controller("NavbarCtrl", ["$scope", "$location", "Session", "isPhysician", "isPatient", "isAdmin", "AssignedPatients", "showLoginDialog",
-    function ($scope, $location, Session, isPhysician, isPatient, isAdmin, AssignedPatients, showLoginDialog) {
+breul.controller("NavbarCtrl", ["$scope", "$location", "Session","showLoginDialog",
+    function ($scope, $location, Session, showLoginDialog) {
 
         $scope.session = Session.get();
-        $scope.isPhysician = isPhysician;
-        $scope.isPatient = isPatient;
-        $scope.isAdmin = isAdmin;
-
-        $scope.assignedPatients = AssignedPatients.query();
 
         $scope.getNavActiveClass = function (path) {
             if (path === "/") {

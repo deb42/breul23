@@ -25,6 +25,7 @@
     <script src="/components/breul/application/application.js"></script>
     <script src="/components/breul/main/main.js"></script>
     <script src="/components/breul/intern/intern.js"></script>
+    <script src="/components/breul/announcements/announcements.js"></script>
 
 </head>
 <body class="fm-body">
@@ -35,7 +36,7 @@
                 <div id="header_wrap">
                     <div id="header_logo">
                         <img width="100%" class="img-rounded profile-picture"
-                             ng-src="/api/files/86cc3fdb5a18ac7895440da3710a17/header_wrap_picture.png"
+                             ng-src="/api/files/pictures/header_wrap_picture.png"
                              title="{{ getTitle() }}"/>
                     </div>
                 </div>
@@ -66,7 +67,7 @@
                                         <li><a href="#/application">Bewerben</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">News</a></li>
+                                <li><a href="#/announcements">News</a></li>
                                 <li><a href="#/application">Bewerben</a></li>
                                 <li><a href="#">Kontakt</a></li>
                             </ul>
@@ -91,9 +92,12 @@
         </div>
     </div>
 </div>
-
-<div class="content">
-    <ng-view></ng-view>
+<div class="content_area">
+    <div class="content_area_inner">
+        <div class="content">
+            <ng-view></ng-view>
+        </div>
+    </div>
 </div>
 
 

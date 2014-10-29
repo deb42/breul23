@@ -33,9 +33,18 @@ api.factory("getUserClass", [ "Patient" , "Physician", function (Patient, Physic
     };
 }]);
 
+api.factory("Announcements", ["$resource", function ($resource) {
+    return $resource("/api/announcements");
+}]);
+
 api.factory("Patient", ["$resource", function ($resource) {
     return $resource("/api/patients/:type", {type: "@type"});
 }]);
+
+api.factory("Announcements", ["$resource", function ($resource) {
+    return $resource("/api/announcements");
+}]);
+
 
 api.factory("Physician", ["$resource", function ($resource) {
     return $resource("/api/physicians/:id", {id: "@id" });

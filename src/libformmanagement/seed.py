@@ -9,6 +9,7 @@ import string
 import flask
 import shutil
 import json
+from werkzeug.utils import secure_filename
 
 from .models import *
 from . import app
@@ -124,11 +125,62 @@ def seed():
 
 
     with open(seed_dir("pictures\header_wrap_picture.PNG"), "rb") as f:
-        f = upload_file(FileStorage(f, filename="header_wrap_picture.png"))
+        access_token = 'pictures'
+        file = FileStorage(f, filename="header_wrap_picture.png")
+        os.mkdir(os.path.join(app.config["UPLOAD_FOLDER"], access_token))
+        filename = access_token + "/" + secure_filename(file.filename)
+        file.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
+        f = filename
     wrap = Picture(name="header_wrap_picture", image=f)
     db.session.add(wrap)
 
+    db.session.commit()
 
+
+    announcements_database = (
+        {
+            "title": "Freibier am Samstag!",
+            "content": "Liebe Breulianer, im Zuge des Neuenwochenendes werden wir an diesem Samstag (27.09.) die Bar öffnen, damit man sich schon einmal kennenlernen kann. Starten werden wir spätestens gegen 21 Uhr. Es wird auch Freibier geben, also kommt alle und zahlreich! Eure Tutoren, Lukas und Jules"
+        },
+        {
+            "title": "Liturgieplan Juli 2014",
+            "content": "Gottesdienste in der Hauskapelle „Verklärung Christi“ im Juli 2014   Dienstag 1. Juli 7:00 Uhr Heilige Messe L: Am 3,1-8; 4,11-12 Ev: Mt 8,23-27 Mittwoch Mariä Heimsuchung 2. Juli 20:30 Uhr Heilige Messe vom FestL: Röm 12,9-16bEv: Lk 1,39-56 Donnerstag 3. Juli 22:00 Uhr22:30 Uhr Eucharistische AnbetungKomplet Dienstag 8. Juli 7:00 Uhr Heilige MesseL: Hos 8,4-7.11-13Ev: […]"
+        },
+        {
+            "title": "KSHG Turnier",
+            "content": "Liebe Mitbewohner, während wir uns heute Abend ab- Achtung!- 18:30  Uhr im Breulcup beim Fußball messen, findet am Sonntag um 11 Uhr das traditionsreiche KSHG-Fußballturnier am Bistumsplatz an der Anette Allee 43 (vgl. Weg vom Breul aus) statt. Es wäre schön, wenn dort nicht nur die Fußball-, sondern auch die Breulbegeisterten vorbeischauen würden, um unsere […]"
+        },
+        {
+            "title": "Maitour",
+            "content": "Hallo Jungs, auch wenn das Wetter für morgen nicht allzu gut angesagt ist, werden wir, die Tutoren der Burse und des Breul, ein Programm anbieten. Wir treffen uns um 12 Uhr auf dem großen 400er Balkon (oder in der Nähe) und starten unsere Rallye wenn die Burse um 14 Uhr dazu gestoßen ist. Ein Regenplan […]"
+        }
+    )
+
+    announcements =[]
+    for i in range(len(announcements_database)):
+        announcements.append(
+            Announcement(
+                title=announcements_database[i]["title"],
+                content=announcements_database[i]["content"]
+            )
+        )
+
+    for announcement in announcements:
+        db.session.add(announcement)
+
+
+    db.session.commit()
+
+    drink = Drink(name="Bier", price=1)
+    db.session.add(drink)
+    db.session.commit()
+
+    barcharge = Barcharge(resident_id=1)
+    db.session.add(barcharge)
+    db.session.commit()
+
+    blub = BarchargeDrinks(barcharge_id=1, drink_id=1, amount=5)
+    db.session.add(blub)
     db.session.commit()
 
     print("Complete!")

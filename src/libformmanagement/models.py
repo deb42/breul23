@@ -62,20 +62,9 @@ class User(db.Model):
 
 class Resident(User):
     id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
+    barcharge = db.relationship("Barcharge", backref="Resident", foreign_keys="Barcharge.resident_id")
     __mapper_args__ = {
         'polymorphic_identity': TYPE_PATIENT
-    }
-
-class Barkeeper(User):
-    id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
-    __mapper_args__ = {
-        'polymorphic_identity': TYPE_PHYSICIAN
-    }
-
-class Tutor(User):
-    id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
-    __mapper_args__ = {
-        'polymorphic_identity': TYPE_PHYSICIAN
     }
 
 class Administrator(User):
@@ -83,6 +72,14 @@ class Administrator(User):
     __mapper_args__ = {
         'polymorphic_identity': TYPE_ADMINISTRATOR
     }
+
+class Duty(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80))
+
+class ResidentDuty(db.Model):
+    resident_id = db.Column(db.Integer, db.ForeignKey('resident.id'), primary_key=True)
+    duty_id = db.Column(db.Integer, db.ForeignKey('duty.id'), primary_key=True)
 
 class Picture(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -94,7 +91,6 @@ class Picture(db.Model):
 class Announcement(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(140))
-    type = type = db.Column(db.Integer, unique=True)
     content = db.Column(utils.JSONType(5000))
 
     def __repr__(self):
@@ -105,7 +101,25 @@ class Category(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(140))
 
-class ConversationParticipants(db.Model):
+class AnnouncementCategories(db.Model):
     announcement_id = db.Column(db.Integer, db.ForeignKey('announcement.id'), primary_key=True)
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'), primary_key=True)
+
+class Drink(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(140))
+    price = db.Column(db.Integer)
+
+class Barcharge(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    resident_id = db.Column(db.Integer, db.ForeignKey('resident.id'))
+
+
+
+class BarchargeDrinks(db.Model):
+    barcharge_id = db.Column(db.Integer, db.ForeignKey('barcharge.id'), primary_key=True)
+    drink_id = db.Column(db.Integer, db.ForeignKey('drink.id'), primary_key=True)
+    amount = db.Column(db.Integer)
+
+
 

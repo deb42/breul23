@@ -10,7 +10,7 @@ var main = angular.module("breul.main", [
     "breul.main"
 ]);
 
-main.controller("mainCtrl", ["$scope", "Session", function ($scope, Session){
+main.controller("mainCtrl", ["$scope", "Session", function ($scope, Session) {
     $scope.session = Session.get();
 }]);
 

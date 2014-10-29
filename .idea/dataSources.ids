@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="breul" uuid="1fc9a8e8-2ddc-44f8-bc3c-345365656821">
+    <database-info product="SQLite" version="3.7.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="administrator" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <foreign-key name="#FAKE_administrator_1" columns="id" ref-table="user" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+    </table>
+    <table name="announcement" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="title" sqlType="VARCHAR(140)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="content" sqlType="VARCHAR(5000)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <exported-key name="#FAKE_announcement_categories_2" table="announcement_categories" schema="" catalog="" columns="announcement_id"/>
+      <exported-key name="#FAKE_conversation_participants_2" table="conversation_participants" schema="" catalog="" columns="announcement_id"/>
+    </table>
+    <table name="announcement_categories" schema="" catalog="" type="TABLE">
+      <column name="announcement_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="category_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="announcement_id,category_id"/>
+      <foreign-key name="#FAKE_announcement_categories_1" columns="category_id" ref-table="category" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_announcement_categories_2" columns="announcement_id" ref-table="announcement" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+    </table>
+    <table name="barcharge" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="resident_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <foreign-key name="#FAKE_barcharge_1" columns="resident_id" ref-table="resident" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <exported-key name="#FAKE_barcharge_drinks_2" table="barcharge_drinks" schema="" catalog="" columns="barcharge_id"/>
+    </table>
+    <table name="barcharge_drinks" schema="" catalog="" type="TABLE">
+      <column name="barcharge_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="drink_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="amount" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="barcharge_id,drink_id"/>
+      <foreign-key name="#FAKE_barcharge_drinks_1" columns="drink_id" ref-table="drink" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_barcharge_drinks_2" columns="barcharge_id" ref-table="barcharge" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+    </table>
+    <table name="barkeeper" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <foreign-key name="#FAKE_barkeeper_1" columns="id" ref-table="user" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+    </table>
+    <table name="category" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(140)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <exported-key name="#FAKE_announcement_categories_1" table="announcement_categories" schema="" catalog="" columns="category_id"/>
+      <exported-key name="#FAKE_conversation_participants_1" table="conversation_participants" schema="" catalog="" columns="category_id"/>
+    </table>
+    <table name="conversation_participants" schema="" catalog="" type="TABLE">
+      <column name="announcement_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="category_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="announcement_id,category_id"/>
+      <foreign-key name="#FAKE_conversation_participants_1" columns="category_id" ref-table="category" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_conversation_participants_2" columns="announcement_id" ref-table="announcement" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+    </table>
+    <table name="drink" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(140)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="price" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <exported-key name="#FAKE_barcharge_drinks_1" table="barcharge_drinks" schema="" catalog="" columns="drink_id"/>
+    </table>
+    <table name="drinks" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(140)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="duty" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(80)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <exported-key name="#FAKE_resident_duty_1" table="resident_duty" schema="" catalog="" columns="duty_id"/>
+    </table>
+    <table name="picture" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(80)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="image" sqlType="VARCHAR(200)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="resident" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <foreign-key name="#FAKE_resident_1" columns="id" ref-table="user" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <exported-key name="#FAKE_barcharge_1" table="barcharge" schema="" catalog="" columns="resident_id"/>
+      <exported-key name="#FAKE_resident_duty_2" table="resident_duty" schema="" catalog="" columns="resident_id"/>
+    </table>
+    <table name="resident_duty" schema="" catalog="" type="TABLE">
+      <column name="resident_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="duty_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="resident_id,duty_id"/>
+      <foreign-key name="#FAKE_resident_duty_1" columns="duty_id" ref-table="duty" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_resident_duty_2" columns="resident_id" ref-table="resident" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+    </table>
+    <table name="tutor" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <foreign-key name="#FAKE_tutor_1" columns="id" ref-table="user" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+    </table>
+    <table name="user" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="username" sqlType="VARCHAR(80)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="pw_hash" sqlType="VARCHAR(100)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR(80)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR(120)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="birthday" sqlType="VARCHAR(12)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="type" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <exported-key name="#FAKE_administrator_1" table="administrator" schema="" catalog="" columns="id"/>
+      <exported-key name="#FAKE_barkeeper_1" table="barkeeper" schema="" catalog="" columns="id"/>
+      <exported-key name="#FAKE_resident_1" table="resident" schema="" catalog="" columns="id"/>
+      <exported-key name="#FAKE_tutor_1" table="tutor" schema="" catalog="" columns="id"/>
+    </table>
+  </data-source>
+</component>

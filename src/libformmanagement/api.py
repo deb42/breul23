@@ -40,10 +40,6 @@ def get_session_obj():
     session_data = {
         "user": user
     }
-    if type(user) == Patient:
-        session_data["physician"] = user.physician
-        del user.physician  # don't include the physician data twice.
-
     return jsonify(session_data)
 
 
@@ -78,8 +74,8 @@ def sing_up_patient():
     """
     new_patient_request = request.json
     new_patient_request["pw_hash"] = generate_password_hash(new_patient_request["pw_hash"])
-    patient = Patient(**new_patient_request)
-    db.session.add(patient)
+    resident = Resident(**new_patient_request)
+    db.session.add(resident)
     db.session.commit()
 
     user = User.query.filter_by(username=new_patient_request["username"]).first_or_404()
@@ -333,3 +329,8 @@ def get_file_blob(token, filename):
 @api.route("/picture/<name>")
 def get_picture(name):
     return jsonify(Picture.query.filter_by(name=name).first_or_404())
+
+
+@api.route("/announcements")
+def get_announcements():
+    return jsonify(Announcement.query.all())

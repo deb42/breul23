@@ -1,0 +1,17 @@
+<div ng-controller="announcementsCtrl">
+    <div class="row">
+        <div class="col-md-8">
+            <div ng-repeat="announcement in announcements">
+                    <div class="content_tile">
+                        <div class="picture">
+                            <h2>{{announcement.title}}</h2>
+                            {{announcement.content}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <side-bar></side-bar>
+        </div>
+    </div>
+</div>

@@ -47,11 +47,11 @@ class FiktivFileAdmin(FileAdmin):
         return is_admin()
 
 # To add a model to the admin interface, simply add it below.
-# admin.add_view(ModelView(User, db.session))
+admin.add_view(ModelView(User, db.session))
 admin.add_view(FiktivModelView(Resident, db.session))
-admin.add_view(FiktivModelView(Barkeeper, db.session, category="Users"))
-admin.add_view(FiktivModelView(Tutor, db.session, category="Users"))
-admin.add_view(FiktivModelView(Administrator, db.session, category="Users"))
+admin.add_view(FiktivModelView(Barcharge, db.session, category="Bar"))
+admin.add_view(FiktivModelView(Drink, db.session, category="Bar"))
+admin.add_view(FiktivModelView(BarchargeDrinks, db.session, category="Bar"))
 admin.add_view(FiktivModelView(Announcement, db.session))
 admin.add_view(FiktivModelView(Category, db.session))
 

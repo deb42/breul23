@@ -54,7 +54,7 @@ common.factory('showSingUpDialog', ['$modal', '$http', 'Session', 'Patient',
                         pw_hash: $scope.patient.password,
                         name: $scope.patient.forename + " " + $scope.patient.surname,
                         birthday: $scope.patient.birthday,
-                        gender:  $scope.patient.gender,
+                        gender: $scope.patient.gender,
                         physician_id: 0
                     });
 
@@ -91,22 +91,26 @@ common.factory('showSingUpDialog', ['$modal', '$http', 'Session', 'Patient',
 
     }]);
 
-
-common.directive('questionnaireForm', [function () {
-    return{
+common.directive('sideBar', ['Session', function (Session) {
+    return {
+        link: link,
         restrict: "E",
         scope: {
-            questionnaire: "=",
-            index: "=",
-            answers: "=",
-            reply: "="
+            user: "="
         },
-        templateUrl: '/components/breul/common/questionnaie-form.html',
-
-        link: function (scope, element, attrs) {
-
-        }
+        templateUrl: '/components/breul/common/side-bar.html'
     };
+    function link(scope, element, attrs) {
+        scope.session = Session.get();
+
+        scope.$watch("session.user", function (user) {
+            if (user) {
+
+            }
+        });
+
+
+    }
 }]);
 
 common.directive('chart', function () {
@@ -154,4 +158,5 @@ common.directive('chart', function () {
 
     }
 });
+;
 
