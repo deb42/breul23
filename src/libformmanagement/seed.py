@@ -181,11 +181,11 @@ def seed():
     db.session.add(drink)
     db.session.commit()
 
-    barcharge = Barcharge(resident_id=1)
+    barcharge = Barcharge(resident_id=1, done=True)
     db.session.add(barcharge)
     db.session.commit()
 
-    blub = BarchargeDrinks(barcharge_id=1, drink_id=1, amount=5)
+    blub = BarchargeDrink(barcharge=barcharge, drink=drink, amount=5)
     db.session.add(blub)
     db.session.commit()
 

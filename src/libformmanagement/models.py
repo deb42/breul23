@@ -92,7 +92,7 @@ class Announcement(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(140))
     content = db.Column(utils.JSONType(5000))
-    public = db.Column(db.Boolean, default=0)
+    public = db.Column(db.Boolean, default=False)
 
     def __repr__(self):
         return "%s: %s" % (self.title)
@@ -106,18 +106,27 @@ class AnnouncementCategories(db.Model):
     announcement_id = db.Column(db.Integer, db.ForeignKey('announcement.id'), primary_key=True)
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'), primary_key=True)
 
+
+
+
 class Drink(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(140))
     price = db.Column(db.Integer)
+    barcharge_info = db.relationship("BarchargeDrink", backref="drink")
+
+    def __repr__(self):
+        return self.name
+
 
 class Barcharge(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     resident_id = db.Column(db.Integer, db.ForeignKey('resident.id'))
+    done = db.Column(db.Boolean, default=False)
+    barcharge_info = db.relationship("BarchargeDrink", backref="barcharge")
 
 
-
-class BarchargeDrinks(db.Model):
+class BarchargeDrink(db.Model):
     barcharge_id = db.Column(db.Integer, db.ForeignKey('barcharge.id'), primary_key=True)
     drink_id = db.Column(db.Integer, db.ForeignKey('drink.id'), primary_key=True)
     amount = db.Column(db.Integer)

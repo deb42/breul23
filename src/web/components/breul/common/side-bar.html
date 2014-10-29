@@ -1,12 +1,8 @@
 <div class="content_tile">
     <div class="content_tile_inner">
         <h2>Bewohner Info</h2>
-        Seniorbeitrag <p ng-show="user.seniorDues">bezahlt</p>
-
-        <p ng-hide="user.seniorDues">nicht bezahlt</p> <br>
-        Netzwerkbeitrag <p ng-show="user.networkDues">bezahlt</p>
-
-        <p ng-hide="user.seniorDues">nicht bezahlt</p><br>
+        Seniorbeitrag <a ng-show="user.seniorDues">bezahlt</a><a ng-hide="user.seniorDues">nicht bezahlt</a> <br>
+        Netzwerkbeitrag <a ng-show="user.networkDues">bezahlt</a><a ng-hide="user.seniorDues">nicht bezahlt</a><br>
     </div>
 </div>
 <div class="content_tile">
