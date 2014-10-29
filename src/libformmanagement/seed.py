@@ -177,15 +177,78 @@ def seed():
 
     db.session.commit()
 
-    drink = Drink(name="Bier", price=1)
-    db.session.add(drink)
+    items_database = (
+        {
+            "name": "Bier",
+            "price": 1
+        },
+        {
+            "name": "Weizen",
+            "price": 1
+        },
+        {
+            "name": "Mischbier",
+            "price": 1
+        },
+        {
+            "name": "Wasser",
+            "price": 0.8
+        },
+        {
+            "name": "Cola",
+            "price": 1.1
+        },
+        {
+            "name": "Pizza",
+            "price": 1.8
+        },
+        {
+            "name": "Chips",
+            "price": 0.8
+        },
+        {
+            "name": "Salzstangen",
+            "price": 0.6
+        },
+        {
+            "name": "Mettentchen",
+            "price": 1
+        }
+    );
+
+    items =[]
+    for i in range(len(items_database)):
+        items.append(
+            Item(
+                name=items_database[i]["name"],
+                price=items_database[i]["price"]
+            )
+        )
+
+    for item in items:
+        db.session.add(item)
     db.session.commit()
 
-    barcharge = Barcharge(resident_id=1, done=True)
+
+    bar_inventory = []
+    for item in items:
+        bar_inventory.append(
+            BarInventory(
+                item=item,
+                amount=10,
+                date="12.12.2014"
+            )
+        )
+
+    for item in bar_inventory:
+        db.session.add(item)
+    db.session.commit()
+
+    barcharge = BarCharge(resident_id=1, done=True)
     db.session.add(barcharge)
     db.session.commit()
 
-    blub = BarchargeDrink(barcharge=barcharge, drink=drink, amount=5)
+    blub = SoldItemBar(barCharge=barcharge, item=items[1], amount=5)
     db.session.add(blub)
     db.session.commit()
 

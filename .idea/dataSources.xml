@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="523460841">
-    <data-source source="LOCAL" name="breul" uuid="1fc9a8e8-2ddc-44f8-bc3c-345365656821">
+  <component name="DataSourceManagerImpl" format="xml" hash="539450131">
+    <data-source source="LOCAL" name="breul" uuid="79b930fc-e9b4-4635-9141-7af8c71d111b">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:C:\Users\David\Documents\GitHub\breul23\src\breul.db</jdbc-url>

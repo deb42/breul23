@@ -62,7 +62,7 @@ class User(db.Model):
 
 class Resident(User):
     id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
-    barcharge = db.relationship("Barcharge", backref="Resident", foreign_keys="Barcharge.resident_id")
+    barcharge = db.relationship("BarCharge", backref="Resident", foreign_keys="BarCharge.resident_id")
     __mapper_args__ = {
         'polymorphic_identity': TYPE_PATIENT
     }
@@ -109,27 +109,33 @@ class AnnouncementCategories(db.Model):
 
 
 
-class Drink(db.Model):
+class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(140))
     price = db.Column(db.Integer)
-    barcharge_info = db.relationship("BarchargeDrink", backref="drink")
+    sold_at_bar_info = db.relationship("SoldItemBar", backref="item")
+    bar_inventory_info = db.relationship("BarInventory", backref="item")
 
     def __repr__(self):
         return self.name
 
 
-class Barcharge(db.Model):
+class BarCharge(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     resident_id = db.Column(db.Integer, db.ForeignKey('resident.id'))
     done = db.Column(db.Boolean, default=False)
-    barcharge_info = db.relationship("BarchargeDrink", backref="barcharge")
+    sold_items = db.relationship("SoldItemBar", backref="barCharge")
 
 
-class BarchargeDrink(db.Model):
-    barcharge_id = db.Column(db.Integer, db.ForeignKey('barcharge.id'), primary_key=True)
-    drink_id = db.Column(db.Integer, db.ForeignKey('drink.id'), primary_key=True)
+class SoldItemBar(db.Model):
+    bar_charge_id = db.Column(db.Integer, db.ForeignKey('bar_charge.id'), primary_key=True)
+    item_id = db.Column(db.Integer, db.ForeignKey('item.id'), primary_key=True)
     amount = db.Column(db.Integer)
+
+class BarInventory(db.Model):
+    drink_id = db.Column(db.Integer, db.ForeignKey('item.id'), primary_key=True)
+    amount = db.Column(db.Integer)
+    date = db.Column(db.String(10))
 
 
 

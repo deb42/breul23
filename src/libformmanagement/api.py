@@ -184,4 +184,4 @@ For the moment, that's a feature, so just ignore it.
 
 @api.route("/barcharge/<resident_id>")
 def get_barcharge(resident_id):
-    return jsonify(Barcharge.query.filter_by(resident_id=resident_id).options(joinedload(Barcharge.barcharge_info)).all())
+    return jsonify(BarCharge.query.filter_by(resident_id=resident_id).options(joinedload(BarCharge.barcharge_info)).all())
