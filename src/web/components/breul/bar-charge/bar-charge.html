@@ -3,19 +3,19 @@
         <div class="content_tile_inner">
             <div ng-repeat="item in items">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-offset-2 col-md-2">
                         {{item.name}}:
                     </div>
                     <div class="col-md-3">
                         <div class="input-group">
-                            <input type="text" class="form-control">
+                            <input class="form-control"  type="number" ng-model="amount" min="1">
 
                             <div class="input-group-btn">
-                                <!-- Button and dropdown menu -->
+                                <button type="button" class="btn btn-default" tabindex="-1" ng-click="add(item, amount); amount = 1">Verkaufen</button>
                             </div>
                         </div>
                     </div>
-                    <br><br><br>
+                    <br><br>
                 </div>
             </div>
         </div>

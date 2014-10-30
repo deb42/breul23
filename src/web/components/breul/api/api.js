@@ -41,6 +41,10 @@ api.factory("Items", ["$resource", function ($resource) {
     return $resource("/api/items");
 }]);
 
+api.factory("SoldItemBar", ["$resource", function ($resource) {
+    return $resource("/api/soldItemBar");
+}]);
+
 api.factory("Patient", ["$resource", function ($resource) {
     return $resource("/api/patients/:type", {type: "@type"});
 }]);
@@ -70,8 +74,8 @@ api.factory("AssignedPatients", ["$resource", function ($resource) {
             return $resource("/api/diagnosis/patients");
 }]);
 
-api.service("Session", ["$http", "$q", "getUserClass", "Physician",
-    function ($http, $q, getUserClass, Physician) {
+api.service("Session", ["$http", "$q", "getUserClass", "Physician", "BarCharge",
+    function ($http, $q, getUserClass, Physician, BarCharge) {
         var self = this;
 
         var cache_enabled = false;
@@ -92,10 +96,14 @@ api.service("Session", ["$http", "$q", "getUserClass", "Physician",
         // update existing session details
         var update = function (session) {
             cacheSession(session);
+            console.log(session);
             //Replace this.data with the session info,
             //but make sure that the JS object reference to session.data doesn't change.
             for (var key in data) {
                 delete data[key];
+            }
+            if (session && session.bar_charge) {
+                data.bar_charge = session.bar_charge
             }
             if (session && session.user) {
                 var UserClass = getUserClass(session.user.type);
@@ -103,6 +111,9 @@ api.service("Session", ["$http", "$q", "getUserClass", "Physician",
             }
             if (session && session.physician) {
                 data.physician = new Physician(session.physician);
+            }
+            if(session && session.bar_charge && session.user){
+                BarCharge.setUserAuthenticated(session.bar_charge.barCharge.resident_id === session.user.id)
             }
         };
         var c = sessionStorage[sessionStorageKey];
@@ -119,6 +130,7 @@ api.service("Session", ["$http", "$q", "getUserClass", "Physician",
         } else {
             update(undefined);
             init = $http.get("/api/session").success(function (session) {
+                console.log(session)
                 update(session);
             });
         }

@@ -158,5 +158,17 @@ common.directive('chart', function () {
 
     }
 });
-;
+
+common.service('BarCharge', function () {
+    var userIsAuthenticated = false;
+
+    this.setUserAuthenticated = function (value) {
+        userIsAuthenticated = value;
+        console.log(value)
+    };
+
+    this.getUserAuthenticated = function () {
+        return userIsAuthenticated;
+    }
+});
 

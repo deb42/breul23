@@ -52,6 +52,7 @@ admin.add_view(FiktivModelView(Resident, db.session))
 admin.add_view(FiktivModelView(BarCharge, db.session, category="Bar"))
 admin.add_view(FiktivModelView(Item, db.session, category="Bar"))
 admin.add_view(FiktivModelView(SoldItemBar, db.session, category="Bar"))
+admin.add_view(FiktivModelView(BarCalendar, db.session, category="Bar"))
 admin.add_view(FiktivModelView(Announcement, db.session))
 admin.add_view(FiktivModelView(Category, db.session))
 

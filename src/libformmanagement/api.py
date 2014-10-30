@@ -37,10 +37,12 @@ def get_session_obj():
         abort(403)
     user = User.query.with_polymorphic("*")\
                 .filter_by(id=session["user_id"]).first_or_404()
-    barcharge = "test"
+    today = date.today().__str__()
+    print(today)
+    bar_charge = BarCalendar.query.options(joinedload("barCharge")).get(today) # BarCharge.query.options(joinedload(BarCharge.date)).first_or_404()
     session_data = {
         "user": user,
-        "barcharge": barcharge
+        "bar_charge": bar_charge
     }
     return jsonify(session_data)
 
@@ -184,8 +186,34 @@ For the moment, that's a feature, so just ignore it.
 
 @api.route("/barCharge/<resident_id>")
 def get_bar_charge(resident_id):
-    return jsonify(BarCharge.query.filter_by(resident_id=resident_id).options(joinedload(BarCharge.barcharge_info)).all())
+    return jsonify(BarCharge.query.filter_by(resident_id=resident_id).options(joinedload(BarCharge.sold_items)).all())
 
 @api.route("/items")
 def get_items():
     return jsonify(Item.query.all())
+
+@api.route("/soldItemBar", methods=["POST"])
+def add_sold_item():
+    """
+    POST to the list: add a new reply.
+    The right type will be defined in the function init_reply
+    Don't forget to call db.session.commit()
+    """
+    item = request.json
+    Item.query.get(item["item_id"]).decrease_bar(item["amount"])
+
+    try:
+        soldItem2 = SoldItemBar.query.filter_by(bar_charge_id=item["bar_charge_id"]).filter_by(item_id=item["item_id"]).first_or_404()
+        soldItem2.add_amount(item["amount"])
+        db.session.commit()
+        return jsonify(soldItem2)
+    except:
+        soldItem = SoldItemBar(**request.json)
+        db.session.add(soldItem)
+        db.session.commit()
+        return jsonify(soldItem)
+
+
+@api.route("/soldItemBar/<bar_charge_id>/<item_id>")
+def get_sold_item(bar_charge_id, item_id):
+     return jsonify(SoldItemBar.query.filter_by(bar_charge_id=bar_charge_id).filter_by(item_id=item_id).first_or_404())

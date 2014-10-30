@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="breul" uuid="79b930fc-e9b4-4635-9141-7af8c71d111b">
+  <data-source source="LOCAL" name="breul" uuid="55ab2973-ba45-485b-bbc8-14730e62444c">
     <database-info product="SQLite" version="3.7.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
     <schema name="" catalog=""/>
@@ -24,12 +24,19 @@
       <foreign-key name="#FAKE_announcement_categories_1" columns="category_id" ref-table="category" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
       <foreign-key name="#FAKE_announcement_categories_2" columns="announcement_id" ref-table="announcement" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
     </table>
+    <table name="bar_calendar" schema="" catalog="" type="TABLE">
+      <column name="date" sqlType="DATE" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="bar_charge_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="date,bar_charge_id"/>
+      <foreign-key name="#FAKE_bar_calendar_1" columns="bar_charge_id" ref-table="bar_charge" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+    </table>
     <table name="bar_charge" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
       <column name="resident_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
       <column name="done" sqlType="BOOLEAN" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
       <primary-key columns="id"/>
       <foreign-key name="#FAKE_bar_charge_1" columns="resident_id" ref-table="resident" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <exported-key name="#FAKE_bar_calendar_1" table="bar_calendar" schema="" catalog="" columns="bar_charge_id"/>
       <exported-key name="#FAKE_sold_item_bar_2" table="sold_item_bar" schema="" catalog="" columns="bar_charge_id"/>
     </table>
     <table name="bar_inventory" schema="" catalog="" type="TABLE">
@@ -55,6 +62,8 @@
       <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
       <column name="name" sqlType="VARCHAR(140)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
       <column name="price" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="amount_bar" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="amount_vr" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
       <primary-key columns="id"/>
       <exported-key name="#FAKE_bar_inventory_1" table="bar_inventory" schema="" catalog="" columns="drink_id"/>
       <exported-key name="#FAKE_sold_item_bar_1" table="sold_item_bar" schema="" catalog="" columns="item_id"/>

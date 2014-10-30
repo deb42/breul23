@@ -27,8 +27,8 @@ breul.config(['$routeProvider',
         });
     }]);
 
-breul.run(["Session", "$rootScope", "showLoginDialog", "$location",
-    function (Session, $rootScope, showLoginDialog, $location) {
+breul.run(["Session", "$rootScope", "showLoginDialog", "$location", "BarCharge",
+    function (Session, $rootScope, showLoginDialog, $location,BarCharge) {
 
 
         var session = Session.get();
@@ -40,9 +40,24 @@ breul.run(["Session", "$rootScope", "showLoginDialog", "$location",
             var user = session.user;
         });
 
+        $rootScope.$on('$routeChangeStart', function (next, current) {
+           console.log($location.path())
+            if($location.path()=== "/barCharge"){
+               /* BarCharge.setUserAuthenticated(session.bar_charge.barCharge.resident_id === session.user.id)
+                if(session.bar_charge.barCharge.resident_id === session.user.id){
+                    alert("allowed")
+                }
+                else{
+                    alert("NOT ALLOWED")
+                }*/
+                console.log(BarCharge.getUserAuthenticated())
+
+            }
+        });
+
     }]);
 
-breul.controller("NavbarCtrl", ["$scope", "$location", "Session","showLoginDialog",
+breul.controller("NavbarCtrl", ["$scope", "$location", "Session", "showLoginDialog",
     function ($scope, $location, Session, showLoginDialog) {
 
         $scope.session = Session.get();

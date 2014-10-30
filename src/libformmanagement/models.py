@@ -113,18 +113,28 @@ class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(140))
     price = db.Column(db.Integer)
+    amount_bar = db.Column(db.Integer, default=50)
+    amount_vr = db.Column(db.Integer, default=50)
     sold_at_bar_info = db.relationship("SoldItemBar", backref="item")
     bar_inventory_info = db.relationship("BarInventory", backref="item")
 
     def __repr__(self):
         return self.name
 
+    def increase_bar(self, amount):
+        self.amount_bar += amount
+
+    def decrease_bar(self, amount):
+        self.amount_bar -= amount
+
+
 
 class BarCharge(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     resident_id = db.Column(db.Integer, db.ForeignKey('resident.id'))
     done = db.Column(db.Boolean, default=False)
-    sold_items = db.relationship("SoldItemBar", backref="barCharge")
+    sold_items = db.relationship("SoldItemBar", backref="barCharge", foreign_keys="SoldItemBar.bar_charge_id")
+    date = db.relationship("BarCalendar", backref="barCharge")
 
 
 class SoldItemBar(db.Model):
@@ -132,10 +142,20 @@ class SoldItemBar(db.Model):
     item_id = db.Column(db.Integer, db.ForeignKey('item.id'), primary_key=True)
     amount = db.Column(db.Integer)
 
+    def add_amount(self, amount):
+        print("hallo welt")
+        self.amount += amount
+
 class BarInventory(db.Model):
     drink_id = db.Column(db.Integer, db.ForeignKey('item.id'), primary_key=True)
     amount = db.Column(db.Integer)
     date = db.Column(db.String(10))
 
+class BarCalendar(db.Model):
+    date=db.Column(db.String(15), primary_key=True)
+    bar_charge_id = db.Column(db.Integer, db.ForeignKey('bar_charge.id'))
+
+    def __repr__(self):
+        return self.date
 
 

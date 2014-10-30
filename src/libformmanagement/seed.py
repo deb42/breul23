@@ -5,6 +5,7 @@ import random
 from werkzeug.datastructures import FileStorage
 from werkzeug.security import generate_password_hash
 import string
+from datetime import date
 
 import flask
 import shutil
@@ -251,5 +252,22 @@ def seed():
     blub = SoldItemBar(barCharge=barcharge, item=items[1], amount=5)
     db.session.add(blub)
     db.session.commit()
+
+    today = date.today()
+    bar_date = today
+
+    calendar = []
+    for i in range(1,31):
+        bar_date=bar_date.replace(day=i)
+        calendar.append(
+            BarCalendar(date=bar_date, bar_charge_id=1)
+        )
+
+
+    for charge in calendar:
+        db.session.add(charge)
+    db.session.commit()
+
+
 
     print("Complete!")
