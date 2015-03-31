@@ -125,7 +125,7 @@ def seed():
 
 
 
-    with open(seed_dir("pictures/header_wrap_picture.PNG"), "rb") as f:
+    with open(seed_dir("pictures/header_wrap_picture.png"), "rb") as f:
         access_token = 'pictures'
         file = FileStorage(f, filename="header_wrap_picture.png")
         os.mkdir(os.path.join(app.config["UPLOAD_FOLDER"], access_token))
